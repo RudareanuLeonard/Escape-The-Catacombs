@@ -1,5 +1,7 @@
 #include "defs.h"
 
+static int cnt{0};
+int running{ 1 };
 int main() {
 
 	/*
@@ -10,9 +12,23 @@ int main() {
 	}
 	*/
 
+	SDL_Event listenToKeyPressMenu;
 
-	startMenu();
-	SDL_Delay(1350);
+	while (running) {
+		std::cout << "cnt = " << cnt;
+		startMenu();
+		SDL_Delay(1000);
+	/*	if (!SDL_PollEvent(&listenToKeyPressMenu))
+			break;
+	*/
+		while (SDL_PollEvent(&listenToKeyPressMenu))
+			if (listenToKeyPressMenu.key.keysym.sym == SDLK_y) {
+				std::cout << "Y pressed";
+				running = 0;
+				break;
+			}
+				
+	}
 
 
 
