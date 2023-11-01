@@ -5,9 +5,11 @@
 #include "SDL.h"
 
 #include <iostream>
+#include <vector>
 #undef main
 #include "startMenu.h"
-
+#include "Character.h"
+#include "ChooseYourCharacter.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 800

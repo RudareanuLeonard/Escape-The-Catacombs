@@ -31,6 +31,22 @@ int main() {
 	}
 
 
+	std::vector<Character> characters{Character("Name1", 100, 10)};
+	
+	running = 1;
+	while (running) {
+		chooseYourCharacter(characters);
+		SDL_Delay(1000);
+
+		while (SDL_PollEvent(&listenToKeyPressMenu))
+			if (listenToKeyPressMenu.key.keysym.sym == SDLK_y) {
+				std::cout << "Y pressed";
+				running = 0;
+				break;
+			}
+	}
+
+
 
 
 	return 0;

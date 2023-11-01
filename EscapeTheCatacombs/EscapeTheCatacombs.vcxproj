@@ -133,10 +133,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="ChooseYourCharacter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="startMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="ChooseYourCharacter.h" />
     <ClInclude Include="defs.h" />
     <ClInclude Include="startMenu.h" />
   </ItemGroup>
