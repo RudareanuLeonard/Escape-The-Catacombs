@@ -1,0 +1,1 @@
+This is a 2D Game with UI created in Python. You have to defeat chambers with monsters and bosses. Used pygame library for the UI.

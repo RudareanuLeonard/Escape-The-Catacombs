@@ -15,7 +15,7 @@ SUPERPOWER_COOLDOWN = 25
 
 COWBOY_IMAGE_SIZE = (200, 200)
 
-COWBOY_PATH = "characters/character_cowboy/jpgs/Cowboy4_idle with gun_0.png"
+COWBOY_PATH = "characters/character_cowboy/jpgs/Cowboy4_idle with gun_1.png"
 
 class Cowboy():
     def __init__(self, hp=HP, attack_damage=ATTACK_DAMAGE, attack_speed=ATTACK_SPEED, superpower_damage=SUPERPOWER_DAMAGE, superpower_cooldown=SUPERPOWER_COOLDOWN, jpg_path=COWBOY_PATH, image_size=COWBOY_IMAGE_SIZE):
