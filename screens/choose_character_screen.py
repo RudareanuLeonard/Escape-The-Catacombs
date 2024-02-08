@@ -140,7 +140,7 @@ class ChooseCharacterScreen(Ninja, Viking, Cowboy, Pirate):
         character_image_not_scaled = pygame.image.load(
                 os.path.join(characters[index].jpg_path)
             ).convert() #convert creates a copy that will load faster on the screen
-        
+
         character_image = pygame.transform.scale(character_image_not_scaled, characters[index].image_size)
         character_image_rect = character_image.get_rect()
         character_image_rect.centerx = (WINDOW_WIDTH // 2)
@@ -195,7 +195,10 @@ class ChooseCharacterScreen(Ninja, Viking, Cowboy, Pirate):
         #display the ninja character
         self.display_characters(screen)
 
-        # self.display_character_info(2, screen)
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_1:
+                print("CHOOSE CHAR FILE PRESSED ON NINJA")
+                self.display_character_info(0, screen)
 
         pygame.display.flip() #update the screen
       
